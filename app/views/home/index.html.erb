@@ -1,0 +1,47 @@
+<h1>Home#index</h1>
+<p><%= link_to "記事一覧へ", articles_path %></p>
+
+<%# 土田さんコード %>
+<%# <!DOCTYPE html>
+<html lang="ja"> %>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>てすと</title>
+	<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "BIZ UDPゴシック", "游ゴシック", "ヒラギノ角ゴ ProN", "メイリオ", "MS Pゴシック", sans-serif;
+}
+input {
+	margin: 10px;
+	width: 500px;
+	padding: 10px;
+}
+.cc_button {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin: 10px;
+  padding: 10px;
+  background: cadetblue;
+  color: #fff;
+  width: 150px;
+}
+	</style>
+</head>
+<body>
+  <%= form_with url: root_path, method: :post do |f| %>
+    <input type="text" id="textUrl" name="input_url" value="https://www.kankomie.or.jp/season/gourmet/index">
+    <%= f.submit "解析", id: "btnAnalisys", class: "cc_button" %>
+  <% end %>
+
+  <input type="text" id="keyword" value="">
+</body>
+<script type="text/javascript" src="/javascript/test.js"></script>
+<script type="text/javascript" src="/javascript/keyword.js"></script>
+
+
